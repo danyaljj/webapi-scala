@@ -69,7 +69,7 @@ A Calgary man is facing charges after Saskatchewan RCMP were taken on a wild and
 
 ## Compilation
 
-Maven command-line compilation:
+Command-line compilation:
 
 ```bash
 $ cd /path/to/project/webapi-scala
