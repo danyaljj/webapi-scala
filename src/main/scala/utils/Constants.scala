@@ -28,11 +28,9 @@ object Constants {
   /** Debug flag */
   val DEBUG = true
 
-
   /** Project root & config */
   val CONFIG_FILE = "config.properties"
   val APPLICATION_ROOT = System.getProperty("user.dir")
-
 
   /** Load configuration properties if file exists */
   private val propertiesFile = new File(APPLICATION_ROOT + "/" + CONFIG_FILE)
@@ -40,7 +38,6 @@ object Constants {
   if (propertiesFile.exists()) {
     config.load(new FileInputStream(propertiesFile))
   }
-
 
   /** Google search properties */
   object GoogleProperties {
@@ -50,7 +47,6 @@ object Constants {
     if (config.containsKey("google.apiKey")) apiKey = config.getProperty("google.apiKey")
     if (config.containsKey("google.cseID")) cseID = config.getProperty("google.cseID")
   }
-
 
   /** Twitter properties. */
   object TwitterProperties {
@@ -69,14 +65,12 @@ object Constants {
       oauthAccessTokenSecret = config.getProperty("twitter.oauth.accessTokenSecret")
   }
 
-
   /** Faroo search properties */
   object FarooProperties {
     var apiKey = "UNKNOWN"
 
     if (config.containsKey("faroo.apiKey")) apiKey = config.getProperty("faroo.apiKey")
   }
-
 
   /** Bing search properties */
   object BingProperties {
