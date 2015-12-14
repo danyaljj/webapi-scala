@@ -114,14 +114,26 @@ And choose the right applications.
 Add it it as a depenency to your sbt project:
 
 ```
+resolvers += "CogcompSoftware" at "http://cogcomp.cs.illinois.edu/m2repo/"
+
 libraryDependencies += "com.github.trananh" % "webapi-scala_2.11" % "1.0"
 ```
 
 Or add it to your maven project:
-```xml 
-<dependency>
-	<groupId>com.github.trananh</groupId>
-	<artifactId>webapi-scala_2.11</artifactId>
-	<version>1.0</version>
-</dependency>
+```xml
+<repositories>
+     <repository>
+           <id>CogcompSoftware</id>
+	   <name>CogcompSoftware</name>
+	   <url>http://cogcomp.cs.illinois.edu/m2repo/</url>
+     </repository>
+</repositories>
+<dependencies>
+	<dependency>
+		<groupId>com.github.trananh</groupId>
+		<artifactId>webapi-scala_2.11</artifactId>
+		<version>1.0</version>
+	</dependency>
+</dependencies>
+		
 ```
