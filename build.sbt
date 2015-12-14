@@ -12,3 +12,5 @@ libraryDependencies ++= Seq(
   "org.twitter4j" % "twitter4j-core" % "3.0.3",
   "org.twitter4j" % "twitter4j-stream" %  "3.0.3"
 )
+
+publishTo := Some(Resolver.sftp("CogcompSoftwareRepo", "bilbo.cs.illinois.edu", "/mounts/bilbo/disks/0/www/cogcomp/html/m2repo/"))
